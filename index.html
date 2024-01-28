@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>ISS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#about">LESSONS</a></li>
+                    <li><a href="#lessons">ABOUT</a></li>
+                    <li><a href="reserve.html">RESERVE</a></li>
+                    <li><a href="#cta">CONTACT</a></li>
+                </ul>
+            </div> 
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+    <div class="text-box">
+        <h1>Izidro Sousa Speaker</h1>
+        <p>From Stage Fright to Spotlight:<br>Unleash Your Power on the Podium with Our Expert Public Speaking Lessons! </p>
+        <a href="#about" class="hero-btn">Get Started Now!</a>
+    </div>
+    </section>
+
+<!-------Lessons------>
+
+<section id="about" class="about">
+    <h1>About the Lessons</h1>
+    <p>The coach for the lessons</p>
+
+    <div class="row">
+        <div class="about-col">
+            <h3>Individual lessons</h3>
+            <p>Our individual lessons in public speaking are crafted to meet your unique needs, 
+                whether you're a novice seeking to overcome stage fright or a seasoned speaker aiming to refine your skills. 
+                Each session is designed to unlock your full potential, providing targeted guidance on vocal modulation, body language, content structuring, 
+                and the art of persuasive communication.
+                <br>
+                <br>
+                Embark on this transformative experience with our expert coach who is dedicated to nurturing your confidence and 
+                refining your speaking prowess. Whether you're preparing for a crucial presentation, a public speaking engagement, 
+                or simply looking to boost your overall communication skills, our individual lessons offer a supportive and customized approach.</p>
+        </div>
+        <div class="about-col">
+            <h3>Group lessons</h3>
+            <p>Step into a collaborative space where communication thrives and confidence grows. 
+                Our group lessons in public speaking provide a dynamic and supportive environment for individuals seeking to enhance their speaking skills. 
+                Led by an amazing coach, these sessions offer a shared learning experience, fostering camaraderie and skill development.
+                <br>
+                <br>
+                Whether you're a team gearing up for a collective presentation or an individual seeking a social and interactive learning atmosphere, 
+                our group lessons focus on key aspects such as effective storytelling, persuasive techniques, and impactful delivery. 
+                Join a community of like-minded individuals, share insights, and refine your speaking abilities in a setting that encourages mutual growth.</p>
+        </div>
+        <div class="about-col">
+            <h3>Workshops</h3>
+            <p>Dive into the art of confident and compelling communication with our intensive public speaking workshops. 
+                Designed for individuals hungry for rapid skill development, these workshops provide an immersive and hands-on experience. 
+                Each workshop is crafted to instill practical techniques, foster immediate improvement, and empower participants to overcome speaking challenges.
+                <br>
+                <br>
+                Whether you're aiming to sharpen your presentation skills, enhance your leadership presence, or simply become a more influential communicator, our workshops offer a concentrated learning environment. 
+                Engage in interactive exercises, receive constructive feedback, and leave each session equipped with actionable strategies for success.</p>
+        </div>
+    </div>
+    <a href="reserve.html" class="rsrv-btn">Reserve your lessons now!</a>
+</section>
+
+<!-------Coach------>
+
+<section id="lessons" class="lessons">
+    <h1>About your Coach</h1>
+    <p>Get to know a little bit more about who is going to help you on this journey</p>
+    <div class="row">
+        <div class="lessons-col">
+            <img src="images/pic2.jpg">
+            <div class="layer">
+                <h3>Coach</h3>
+            </div>
+        </div>
+        <div class="lessons-col">
+            <img src="images/pic5.jpg">
+            <div class="layer">
+                <h3>Toastmasters</h3>
+            </div>
+        </div>
+        <div class="lessons-col">
+            <img src="images/pic3.jpg">
+            <div class="layer">
+                <h3>TedX</h3>
+            </div>
+        </div>
+    </div>
+    <a href="about.html" class="rsrv-btn">Get to know him!</a>
+
+</section>
+
+
+
+
+<!--Call to Action-->
+
+<section id="cta" class="cta">
+    <h1>Embark on Your Public Speak Journey</h1>
+    <a href="contact.html" class="hero-btn">CONTACT US</a>
+</section>
+
+<!--Footer-->
+
+<section class="footer">
+    <h4>A little more about us</h4>
+    <p> At ISS, we are passionate about empowering individuals to discover the art of 
+        confident and impactful public speaking. <br>Our mission is to provide comprehensive 
+        coaching lessons that nurture and develop the skills needed to thrive in any 
+        speaking arena. <br> 
+        Join us and embark on a path of self-discovery, mastering the craft of 
+        public speaking to inspire and captivate any audience. <br>
+        Your voice matters, and we are here to help it resonate 
+        with confidence and influence</p>
+        <div class="icons">
+            <i class="fa fa-linkedin"></i>
+        </div>
+</section>
+
+
+<!-------- Javascript for Toggle Menu------------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

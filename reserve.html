@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>ISS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="reserve.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#lessons">LESSONS</a></li>
+                    <li><a href="reserve.html">RESERVE</a></li>
+                    <li><a href="index.html#cta">CONTACT</a></li>
+            </div> 
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    
+    <div class="text-box">
+        <h1>RESERVE YOUR LESSONS</h1>
+        <p>We have diverse types of lessons to optmize your learning and you get to choose which one suits you the best! </p>
+        <a href="#reserve" class="hero-btn">Choose your lessons</a>
+    </div>
+    </section>
+
+    
+ <!--Reserve-->
+ <section id="reserve" class="reserve">
+    <p>To make your reservation, make sure you tell us your name, email, choose where continent do you reside and what type of lessons do you want. Since we also need further information, 
+        tell us how many lessons do you need and what is your availability. After that we will reach out to you to discuss the pricing and also fit you in our schedule!
+    </p>
+</section>
+
+<div class="container">
+    <h2>Your reservation</h2>
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <select id="continent" name="Continent" >
+            <option> Africa</option>
+            <option> Asia</option>
+            <option> Australia</option>
+            <option> Europe</option>
+            <option> North America</option>
+            <option> South America</option>
+        </select>
+        <select id="lessons" name="Lessons">
+            <option> Individual Lessons</option>
+            <option> Group Lessons</option>
+            <option> Workshops</option>
+        </select>
+        <textarea id="message" name="message"placeholder="Additional Information" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+
+<!-------- Javascript for Toggle Menu------------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "izidrosousaspeaker@gmail.com",
+            Password : "257C92AF48F88CA2714D59EA38C33FF5CE43",
+            To : 'izidrosousaspeaker@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form Enquiry",
+            Body : "Name: " + document.getElementById("name").value
+                +"<br> Email: " + document-getElementById("email").value
+                +"<br> Continent: " + document-getElementById("continent").value
+                +"<br> Lessons: " + document-getElementById("lessons").value
+                +"<br> Message: " + document-getElementById("message").value
+                }).then(
+        message => alert("Message Sent Succesfully")
+        );
+    }
+</script>
+</body>
